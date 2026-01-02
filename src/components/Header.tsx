@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Shield, Scan, Github, BookOpen } from 'lucide-react';
+import { Github, BookOpen } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 export function Header() {
   return (
@@ -15,16 +16,7 @@ export function Header() {
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="relative">
-              <div className="p-2 rounded-lg bg-primary/10 border border-primary/30">
-                <Shield className="w-7 h-7 text-primary" />
-              </div>
-              <motion.div
-                className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
+            <img src={logo} alt="DeepGuard Logo" className="w-12 h-12 object-contain" />
             <div>
               <h1 className="font-display text-xl font-bold text-foreground">
                 DeepGuard
